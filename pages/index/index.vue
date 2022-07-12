@@ -1,18 +1,5 @@
 <template>
 	<div class="content">
-		<!-- navigator 链接标签，
-		    url 跳转链接，页面地址
-			bug:智能跳转到 二级页面，不能跳转到tabBar页面
-			open-type 设置跳转链接类型
-		 -->
-		<!-- <navigator url="/pages/detal/detal" hover-class="navigator-hover">
-			<button type="default">跳转到新页面二级页面</button>
-		</navigator>
-		<navigator url="/pages/shopcar/shopcar" open-type="switchTab" hover-class="navigator-hover">
-			<button type="default">跳转到新页面tabBar</button>
-		</navigator> -->
-		
-
 		<div class="list">
 			<Shop @click.native="linkDetail" :shop="item" v-for="item in shopList" :key="item.Id"></Shop>
 		</div>
