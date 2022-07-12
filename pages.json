@@ -71,24 +71,24 @@
 		// 最多有5个一级tab 
 		"list": [{
 			"pagePath": "pages/index/index", // tabbar 加载也买你
-			"iconPath": "./static/icon/finder.png", // 没选中图表
+			"iconPath": "static/img/tabbar/home.svg", // 没选中图表
 			"text": "主页", // tabBar 文本信息
-			"selectedIconPath": "./static/icon/selectfinder.png" // 选中时候时候，图片
+			"selectedIconPath": "static/img/tabbar/home_active.svg" // 选中时候时候，图片
 		}, {
 			"pagePath": "pages/sort/sort",
-			"iconPath": "./static/icon/music.png",
-			"selectedIconPath": "./static/icon/selectmusic.png",
+			"iconPath": "static/img/tabbar/type.svg",
+			"selectedIconPath": "static/img/tabbar/type_active.svg",
 			"text": "分类"
 		}, {
 			"pagePath": "pages/shopcar/shopcar",
-			"iconPath": "./static/icon/music.png",
-			"selectedIconPath": "./static/icon/selectmusic.png",
+			"iconPath": "static/img/tabbar/shopcar.svg",
+			"selectedIconPath": "static/img/tabbar/shopcar_active.svg",
 			"text": "购物车"
 		}, {
 			"pagePath": "pages/mine/mine",
-			"iconPath": "./static/icon/min.png",
+			"iconPath": "static/img/tabbar/profile.svg",
 			"text": "我的",
-			"selectedIconPath": "./static/icon/selectmin.png"
+			"selectedIconPath": "static/img/tabbar/profile_active.svg"
 		}],
 		"color": "#7A7E83", // tabBar 默认文本字体演示
 		"selectedColor": "#3cc51f", // 选中字体颜色

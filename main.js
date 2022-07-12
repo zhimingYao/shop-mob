@@ -8,9 +8,9 @@ import Vue from 'vue'
 App.mpType = 'app'
 
 import test from '@/components/test/index.js'
-import SvgIcon from '@/components/SvgIcon/index.js'
+// import SvgIcon from '@/components/SvgIcon/index.js'
 Vue.use(test)
-Vue.use(SvgIcon)
+// Vue.use(SvgIcon)
 
 const app = new Vue({
 	...App

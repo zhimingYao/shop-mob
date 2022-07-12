@@ -1400,7 +1400,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2590,41 +2590,20 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 19:
-/*!****************************************!*\
-  !*** E:/web浩京/uniapp/app/api/index.js ***!
-  \****************************************/
+/***/ 12:
+/*!******************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/components/test/index.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getShopList = getShopList;var _request = _interopRequireDefault(__webpack_require__(/*! ./@/utils/request.js */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.vue */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 
-// getShopList 返回值是什么?
-function getShopList(page) {
-  return _request.default.get('/goodList', {
-    page: page });
-
-
-  // return request.get的return
-  // return newPromises实例对象
-  // return {
-  //  [[promiseState]]: Pending    promise状态
-  //  [[PromiseResult]]:undefined,  表示程序运算结果
-  // }
-
-  // promise 异步:promiseState  PromiseResult 值更改是异步的
-  // promiseState 当执行 resolve 或者reject 函数.更改
-  //       resolve  pending---->fulfilled
-  //               PromiseResult:undefine----> resolve 实参
-  //       reject   pending --->rejected
-  //               PromiseResult:undefine----> rejecth 实参
-  // 结论
-  // new promise 回调函数是同步的
-  // then catch  回调函数是异步的
-
-
-}
+{
+  install: function install(Vue) {
+    Vue.component('iarco-test', _test.default);
+  } };exports.default = _default;
 
 /***/ }),
 
@@ -2656,90 +2635,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-
-/***/ 20:
-/*!********************************************!*\
-  !*** E:/web浩京/uniapp/app/utils/request.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.http = exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} // 1:普通函数二次封装
-// request.get('',{}).then((c    式
-// 2：请求拦截器
-// 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
-var baseUrl = 'http://192.168.205.20:9528/api';var _default =
-{
-  get: function get(url, data) {
-    return new Promise(function (resolve, reject) {
-      uni.request({
-        data: data,
-        url: baseUrl + url,
-        method: 'get',
-        header: {}, // 配置token
-        success: function success(data) {
-          // 这里做响应拦截
-          resolve(data);
-        },
-        fail: function fail(err) {
-          reject(err);
-        } });
-
-    });
-  },
-  post: function post(url, data) {
-    return new Promise(function (resolve, reject) {
-      uni.request({
-        data: data,
-        url: baseUrl + url,
-        method: 'post',
-        header: {}, // 配置token
-        success: function success(data) {
-          // 这里做响应拦截
-          resolve(data);
-        },
-        fail: function fail(err) {
-          reject(err);
-        } });
-
-    });
-  },
-  // request.http({})
-  http: function http(_ref) {var url = _ref.url,method = _ref.method,data = _ref.data;
-    if (method === 'get') {
-      // this 是什么？？
-      this.get(url, data);
-    } else {
-      this.post(url, data);
-    }
-  } };
-
-
-
-// 2 class 类型
-// 判断this赋值什么对象的逻辑是什么？
-// 第一步：看this写在哪里？
-//   箭头函数
-//   function函数
-// 第二步：function函数：看谁触发函数？
-// 2.1 call apply bind 触发,this === 实参一实例对象
-// 2.2 new  触发  this === new返回额实例对象
-// 2.3 事件触发   this === 触发/绑定事件的dom
-// 2.4 普通对象触发   this === 调用函数的对象
-// 第三步:箭头函数:看距离他最近的那成this
-exports.default = _default;var
-
-
-
-
-http =
-function http(url, method, data) {_classCallCheck(this, http);
-
-};exports.http = http;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
@@ -3204,6 +3099,98 @@ function resolveLocaleChain(locale) {
   return chain;
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+
+/***/ 32:
+/*!******************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/api/index.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getShopList = getShopList;var _request = _interopRequireDefault(__webpack_require__(/*! ./@/utils/request.js */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// getShopList 返回值是什么?
+function getShopList(page) {
+  return _request.default.get('/goodList', {
+    page: page });
+
+}
+
+/***/ }),
+
+/***/ 33:
+/*!**********************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/utils/request.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.http = exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} // 1:普通函数二次封装
+// request.get('',{}).then((c    式
+// 2：请求拦截器
+// 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
+var baseUrl = 'http://192.168.205.20:9528/api';var _default =
+{
+  get: function get(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'get',
+        header: {}, // 配置token
+        success: function success(data) {
+          // 这里做响应拦截
+          resolve(data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  post: function post(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'post',
+        header: {}, // 配置token
+        success: function success(data) {
+          // 这里做响应拦截
+          resolve(data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  // request.http({})
+  http: function http(_ref)
+
+
+
+  {var url = _ref.url,method = _ref.method,data = _ref.data;
+    if (method === 'get') {
+      // this 是什么？？
+      this.get(url, data);
+    } else {
+      this.post(url, data);
+    }
+  } };exports.default = _default;var
+
+
+
+
+http =
+function http(url, method, data) {_classCallCheck(this, http);
+
+};exports.http = http;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
@@ -8733,7 +8720,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8754,14 +8741,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -8847,7 +8834,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9258,30 +9245,13 @@ internalMixin(Vue);
 /***/ }),
 
 /***/ 5:
-/*!**************************************!*\
-  !*** E:/web浩京/uniapp/app/pages.json ***!
-  \**************************************/
+/*!****************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/pages.json ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-
-/***/ 62:
-/*!****************************************************!*\
-  !*** E:/web浩京/uniapp/app/components/test/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.vue */ 57));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-
-{
-  install: function install(Vue) {
-    Vue.component('iarco-test', _test.default);
-  } };exports.default = _default;
 
 /***/ })
 

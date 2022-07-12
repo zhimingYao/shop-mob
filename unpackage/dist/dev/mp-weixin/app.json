@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/mine",
+    "pages/sort/sort",
     "pages/shopcar/shopcar",
+    "pages/mine/mine",
     "pages/detal/detal",
     "components/button/button",
     "components/test/test"
@@ -18,21 +19,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./static/icon/finder.png",
-        "text": "首页",
-        "selectedIconPath": "./static/icon/selectfinder.png"
+        "iconPath": "static/img/tabbar/home.svg",
+        "text": "主页",
+        "selectedIconPath": "static/img/tabbar/home_active.svg"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "static/img/tabbar/type.svg",
+        "selectedIconPath": "static/img/tabbar/type_active.svg",
+        "text": "分类"
       },
       {
         "pagePath": "pages/shopcar/shopcar",
-        "iconPath": "./static/icon/music.png",
-        "selectedIconPath": "./static/icon/selectmusic.png",
+        "iconPath": "static/img/tabbar/shopcar.svg",
+        "selectedIconPath": "static/img/tabbar/shopcar_active.svg",
         "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "./static/icon/min.png",
-        "text": "个人中心",
-        "selectedIconPath": "./static/icon/selectmin.png"
+        "iconPath": "static/img/tabbar/profile.svg",
+        "text": "我的",
+        "selectedIconPath": "static/img/tabbar/profile_active.svg"
       }
     ],
     "color": "#7A7E83",
@@ -40,6 +47,6 @@
     "fontSize": "12px"
   },
   "usingComponents": {
-    "iarco-button": "./components/button/button.vue"
+    "iarco-button": "./components/button/button"
   }
 }
