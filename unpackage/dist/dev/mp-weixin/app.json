@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/mine",
+    "pages/sort/sort",
     "pages/shopcar/shopcar",
+    "pages/mine/mine",
     "pages/detal/detal",
     "components/button/button",
     "components/test/test"
@@ -19,8 +20,14 @@
       {
         "pagePath": "pages/index/index",
         "iconPath": "./static/icon/finder.png",
-        "text": "首页",
+        "text": "主页",
         "selectedIconPath": "./static/icon/selectfinder.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "./static/icon/music.png",
+        "selectedIconPath": "./static/icon/selectmusic.png",
+        "text": "分类"
       },
       {
         "pagePath": "pages/shopcar/shopcar",
@@ -31,7 +38,7 @@
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "./static/icon/min.png",
-        "text": "个人中心",
+        "text": "我的",
         "selectedIconPath": "./static/icon/selectmin.png"
       }
     ],
@@ -40,6 +47,6 @@
     "fontSize": "12px"
   },
   "usingComponents": {
-    "iarco-button": "./components/button/button.vue"
+    "iarco-button": "./components/button/button"
   }
 }
