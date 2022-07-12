@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/shopcar/shopcar",
+    "pages/detal/detal",
+    "components/button/button",
+    "components/test/test"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "必要商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/icon/finder.png",
+        "text": "首页",
+        "selectedIconPath": "./static/icon/selectfinder.png"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "iconPath": "./static/icon/music.png",
+        "selectedIconPath": "./static/icon/selectmusic.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./static/icon/min.png",
+        "text": "个人中心",
+        "selectedIconPath": "./static/icon/selectmin.png"
+      }
+    ],
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "fontSize": "12px"
+  },
+  "usingComponents": {
+    "iarco-button": "./components/button/button.vue"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "uni-app",
+  "version": "1.0.0",
+  "description": "- 1：h5 标签都支持\r - 2：vue指令有效\r - 3：vue响应式数据有效\r - 4：computed watch data methods 有效\r - 5：生命周期有\r - 6：组件通信 props $emit有效 \r - 7：组件注册components:有效\r - 8: vue-router `无效`\r - 9：`vuex vue.observeable` 有效，`不推荐使用`\r - 10 开源的vue插件是否有效？？？？？\r - 11 混入 provid/injue 待定？？？？\r - 12 vue的组件库可以使用 `不推荐`，建议自已写`uni组件库`\r - 13 axios `无效`",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vant": "^3.5.2"
+  }
+}
