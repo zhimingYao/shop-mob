@@ -11,7 +11,7 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "必要商城",
+    "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
@@ -19,27 +19,27 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/img/tabbar/home.svg",
+        "iconPath": "static/img/tabbar/home.jpg",
         "text": "主页",
-        "selectedIconPath": "static/img/tabbar/home_active.svg"
+        "selectedIconPath": "static/img/tabbar/home_active.jpg"
       },
       {
         "pagePath": "pages/sort/sort",
-        "iconPath": "static/img/tabbar/type.svg",
-        "selectedIconPath": "static/img/tabbar/type_active.svg",
+        "iconPath": "static/img/tabbar/type.jpg",
+        "selectedIconPath": "static/img/tabbar/type_active.jpg",
         "text": "分类"
       },
       {
         "pagePath": "pages/shopcar/shopcar",
-        "iconPath": "static/img/tabbar/shopcar.svg",
-        "selectedIconPath": "static/img/tabbar/shopcar_active.svg",
+        "iconPath": "static/img/tabbar/shopcar.jpg",
+        "selectedIconPath": "static/img/tabbar/shopcar_active.jpg",
         "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "static/img/tabbar/profile.svg",
+        "iconPath": "static/img/tabbar/profile.jpg",
         "text": "我的",
-        "selectedIconPath": "static/img/tabbar/profile_active.svg"
+        "selectedIconPath": "static/img/tabbar/profile_active.jpg"
       }
     ],
     "color": "#7A7E83",
