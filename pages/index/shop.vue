@@ -1,7 +1,7 @@
 <template>
 	<div class="item">
-<!-- 		<img :src="shop.img_list_url" alt="">
-		<div>{{shop.title}}</div> -->
+		<img :src="shop.img" alt="">
+		<div>{{shop.title}}</div>
 	</div>
 </template>
 

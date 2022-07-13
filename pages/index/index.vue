@@ -1,7 +1,7 @@
 <template>
 	<div class="content">
 		<div class="list">
-			<Shop @click.native="linkDetail" :shop="item" v-for="item in shopList" :key="item.Id"></Shop>
+			<shop @click.native="linkDetail" :shop="item" v-for="item in shopList" :key="item.Id"></shop>
 		</div>
 	</div>
 </template>
@@ -36,7 +36,11 @@
 			getShopList() {
 				console.log('get shop list run ');
 				// 发送请求
-				getShopList(1).then(res => {
+				let data = {
+					store_id:'1',
+				}
+				getShopList(data).then(res => {
+					console.log(res);
 					this.shopList = res.data
 				})
 
