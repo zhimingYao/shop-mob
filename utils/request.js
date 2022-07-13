@@ -2,7 +2,7 @@
 // request.get('',{}).then((c    式
 // 2：请求拦截器
 // 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
-let baseUrl = 'http://192.168.205.20:9528/api'
+let baseUrl = 'http://192.168.205.195:3000'
 export default {
 	get(url, data) {
 		return new Promise((resolve, reject) => {
@@ -11,9 +11,9 @@ export default {
 				url: baseUrl + url,
 				method: 'get',
 				header: {}, // 配置token
-				success: (data) => {
+				success: (res) => {
 					// 这里做响应拦截
-					resolve(data)
+					resolve(res.data)
 				},
 				fail: (err) => {
 					reject(err)
@@ -28,9 +28,9 @@ export default {
 				url: baseUrl + url,
 				method: 'post',
 				header: {}, // 配置token
-				success: (data) => {
+				success: (res) => {
 					// 这里做响应拦截
-					resolve(data)
+					resolve(res.data)
 				},
 				fail: (err) => {
 					reject(err)

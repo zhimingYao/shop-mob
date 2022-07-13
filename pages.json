@@ -30,8 +30,27 @@
 		{
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "我的",
-				"enablePullDownRefresh": false // 个人中心页，是否启动下拉刷新，默认不启动
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
+				"navigationBarBackgroundColor": "#353535",
+			    "navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": {
+						"bounce": "none",
+						"autoBackButton": true,
+						"homeButton": true,
+						"buttons": [
+							{
+								"type": "back",
+								"float": "left"
+							},
+							{
+								"type": "home",
+								"float": "right"
+							}
+						]
+					}
+				}
 			}
 		},
 		{
