@@ -170,7 +170,11 @@ var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/ind
     getShopList: function getShopList() {var _this = this;
       console.log('get shop list run ');
       // 发送请求
-      (0, _index.getShopList)(1).then(function (res) {
+      var data = {
+        store_id: '1' };
+
+      (0, _index.getShopList)(data).then(function (res) {
+        console.log(res);
         _this.shopList = res.data;
       });
 

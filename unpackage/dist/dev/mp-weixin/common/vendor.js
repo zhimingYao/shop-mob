@@ -2461,6 +2461,30 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
+/***/ 109:
+/*!*************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/api/sort.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getParentName = getParentName;exports.getSecond = getSecond;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 获取一级分类
+function getParentName(data) {
+  console.log('run');
+  return _request.default.post('/type/getParentName', data);
+}
+
+// 获取二级分类
+function getSecond(data) {
+  console.log('run');
+  return _request.default.post('/wares/getSecond', data);
+}
+
+/***/ }),
+
 /***/ 11:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -2649,10 +2673,8 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", { value: true });exports.getShopList = getShopList;var _request = _interopRequireDefault(__webpack_require__(/*! ./@/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 // getShopList 返回值是什么?
-function getShopList(page) {
-  return _request.default.get('/goodList', {
-    page: page });
-
+function getShopList(data) {
+  return _request.default.post('/store/getShopList', data);
 }
 
 /***/ }),
@@ -2669,7 +2691,7 @@ function getShopList(page) {
 // request.get('',{}).then((c    式
 // 2：请求拦截器
 // 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
-var baseUrl = 'http://192.168.205.20:9528/api';var _default =
+var baseUrl = 'http://192.168.205.195:3000';var _default =
 {
   get: function get(url, data) {
     return new Promise(function (resolve, reject) {
@@ -2678,9 +2700,9 @@ var baseUrl = 'http://192.168.205.20:9528/api';var _default =
         url: baseUrl + url,
         method: 'get',
         header: {}, // 配置token
-        success: function success(data) {
+        success: function success(res) {
           // 这里做响应拦截
-          resolve(data);
+          resolve(res.data);
         },
         fail: function fail(err) {
           reject(err);
@@ -2695,9 +2717,9 @@ var baseUrl = 'http://192.168.205.20:9528/api';var _default =
         url: baseUrl + url,
         method: 'post',
         header: {}, // 配置token
-        success: function success(data) {
+        success: function success(res) {
           // 这里做响应拦截
-          resolve(data);
+          resolve(res.data);
         },
         fail: function fail(err) {
           reject(err);

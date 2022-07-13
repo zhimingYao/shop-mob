@@ -15,7 +15,8 @@
 		}, {
 			"path": "pages/sort/sort",
 			"style": {
-				"navigationBarTitleText": "分类",
+				//"navigationBarTitleText": "分类",
+				"navigationStyle":"custom",
 				"enablePullDownRefresh": false // 个人中心页，是否启动下拉刷新，默认不启动
 			}
 		},
@@ -77,7 +78,7 @@
 	],
 	"globalStyle": { // 配置全局程序样式
 		"navigationBarTextStyle": "black", // 导航文本颜色，只有白色 黑色
-		"navigationBarTitleText": "", // 导航默认文本信息
+		//"navigationBarTitleText": "", // 导航默认文本信息
 		"navigationBarBackgroundColor": "#F8F8F8", // 导航背景设
 		"backgroundColor": "#F8F8F8", // 程序背景色
 		// bug: 只有小程序有效H5 APP 需要安装其他依赖包
