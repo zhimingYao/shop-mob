@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/button/button"],{
 
 /***/ 60:
@@ -149,3 +150,6 @@ var _default =
 
 },[[60,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/button/button.js.map
+=======
+Component({})
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91

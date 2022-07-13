@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/test/test"],{
 
 /***/ 13:
@@ -149,3 +150,6 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;createPage(_test.defa
 
 },[[66,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/test/test.js.map
+=======
+Component({})
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91

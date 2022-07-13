@@ -19,9 +19,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
+<<<<<<< HEAD
         "iconPath": "./static/icon/finder.png",
         "text": "主页",
         "selectedIconPath": "./static/icon/selectfinder.png"
+=======
+        "iconPath": "static/img/tabbar/home.svg",
+        "text": "主页",
+        "selectedIconPath": "static/img/tabbar/home_active.svg"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "static/img/tabbar/type.svg",
+        "selectedIconPath": "static/img/tabbar/type_active.svg",
+        "text": "分类"
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
       },
       {
         "pagePath": "pages/sort/sort",
@@ -31,15 +43,21 @@
       },
       {
         "pagePath": "pages/shopcar/shopcar",
-        "iconPath": "./static/icon/music.png",
-        "selectedIconPath": "./static/icon/selectmusic.png",
+        "iconPath": "static/img/tabbar/shopcar.svg",
+        "selectedIconPath": "static/img/tabbar/shopcar_active.svg",
         "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
+<<<<<<< HEAD
         "iconPath": "./static/icon/min.png",
         "text": "我的",
         "selectedIconPath": "./static/icon/selectmin.png"
+=======
+        "iconPath": "static/img/tabbar/profile.svg",
+        "text": "我的",
+        "selectedIconPath": "static/img/tabbar/profile_active.svg"
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
       }
     ],
     "color": "#7A7E83",

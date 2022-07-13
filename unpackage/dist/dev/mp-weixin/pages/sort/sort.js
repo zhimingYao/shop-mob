@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/sort/sort"],{
 
 /***/ 36:
@@ -149,3 +150,6 @@ var _default =
 
 },[[36,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/sort/sort.js.map
+=======
+Component({})
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91

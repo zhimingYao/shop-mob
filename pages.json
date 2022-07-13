@@ -10,7 +10,20 @@
 		{
 			"path": "pages/index/index", // 页面代码
 			"style": { // 页面样式，导航条 背景色
-				"navigationBarTitleText": "主页" // 导航文本内容
+				// "navigationBarTitleText": "主页" ,// 导航文本内容
+				"navigationBarBackgroundColor": "#323232",
+				"navigationBarTextStyle": "white",
+				"titleImage": "static/img/homeTop.png",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "+",
+							"fontSize": "24px",
+							"float": "right"
+							
+						}]
+					}
+				}
 			}
 		}, {
 			"path": "pages/sort/sort",
@@ -30,8 +43,10 @@
 		{
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "我的",
-				"enablePullDownRefresh": false // 个人中心页，是否启动下拉刷新，默认不启动
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#323232",
+				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{
@@ -58,7 +73,7 @@
 	],
 	"globalStyle": { // 配置全局程序样式
 		"navigationBarTextStyle": "black", // 导航文本颜色，只有白色 黑色
-		"navigationBarTitleText": "必要商城", // 导航默认文本信息
+		"navigationBarTitleText": "主页", // 导航默认文本信息
 		"navigationBarBackgroundColor": "#F8F8F8", // 导航背景设
 		"backgroundColor": "#F8F8F8", // 程序背景色
 		// bug: 只有小程序有效H5 APP 需要安装其他依赖包
@@ -71,27 +86,27 @@
 		// 最多有5个一级tab 
 		"list": [{
 			"pagePath": "pages/index/index", // tabbar 加载也买你
-			"iconPath": "./static/icon/finder.png", // 没选中图表
+			"iconPath": "static/img/tabbar/home.svg", // 没选中图表
 			"text": "主页", // tabBar 文本信息
-			"selectedIconPath": "./static/icon/selectfinder.png" // 选中时候时候，图片
+			"selectedIconPath": "static/img/tabbar/home_active.svg" // 选中时候时候，图片			
 		}, {
 			"pagePath": "pages/sort/sort",
-			"iconPath": "./static/icon/music.png",
-			"selectedIconPath": "./static/icon/selectmusic.png",
+			"iconPath": "static/img/tabbar/type.svg",
+			"selectedIconPath": "static/img/tabbar/type_active.svg",
 			"text": "分类"
 		}, {
 			"pagePath": "pages/shopcar/shopcar",
-			"iconPath": "./static/icon/music.png",
-			"selectedIconPath": "./static/icon/selectmusic.png",
+			"iconPath": "static/img/tabbar/shopcar.svg",
+			"selectedIconPath": "static/img/tabbar/shopcar_active.svg",
 			"text": "购物车"
 		}, {
 			"pagePath": "pages/mine/mine",
-			"iconPath": "./static/icon/min.png",
+			"iconPath": "static/img/tabbar/profile.svg",
 			"text": "我的",
-			"selectedIconPath": "./static/icon/selectmin.png"
+			"selectedIconPath": "static/img/tabbar/profile_active.svg"
 		}],
 		"color": "#7A7E83", // tabBar 默认文本字体演示
-		"selectedColor": "#3cc51f", // 选中字体颜色
+		"selectedColor": "#2b2b2b", // 选中字体颜色
 		"fontSize": "12px"
 	}
 }
