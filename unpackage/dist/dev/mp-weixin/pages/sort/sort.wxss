@@ -1,0 +1,11 @@
+
+.sort-left-item.data-v-a1ddb074{
+	padding-left: 20rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+}
+.backgroundColor.data-v-a1ddb074{
+	background-color: #e7e6dd;
+	border-left: 3px solid #aa0000;
+}
+
