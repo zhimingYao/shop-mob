@@ -58,7 +58,7 @@
 			// 获取一级分类
 			getParentName() {
 				getParentName().then(res => {
-					this.sortFirst = res.data;
+					this.sortFirst = res.data || {};
 					// 页面加载获取第一个一级分类下的二级分类
 					this.getSecond()
 				}).catch(err => {
@@ -72,7 +72,7 @@
 				getSecond({
 					parent_name
 				}).then(res => {
-					this.sortSecond = res.data;
+					this.sortSecond = res.data || {};
 				}).catch(err => {
 					console.log(err)
 				})
@@ -85,7 +85,7 @@
 				getSecond({
 					parent_name: item
 				}).then(res => {
-					this.sortSecond = res.data;
+					this.sortSecond = res.data || {};
 				}).catch(err => {
 					console.log(err)
 				})

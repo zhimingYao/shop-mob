@@ -16,7 +16,7 @@
 			"path": "pages/sort/sort",
 			"style": {
 				//"navigationBarTitleText": "分类",
-				"navigationStyle":"custom",
+				"navigationStyle": "custom",
 				"enablePullDownRefresh": false // 个人中心页，是否启动下拉刷新，默认不启动
 			}
 		},
@@ -24,8 +24,24 @@
 			"path": "pages/shopcar/shopcar",
 			"style": {
 				"navigationBarTitleText": "购物车",
-				"navigationBarBackgroundColor": "#eeefff",
-				"enablePullDownRefresh": false
+				"navigationBarBackgroundColor": "#353535",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"type":"back",
+								"float": "left",
+								"onclick": "goHome"
+							}
+						],
+						"backButton": { //自定义 backButton
+							"background": "#00FF00"
+						}
+					}
+				}
 			}
 		},
 		{
@@ -34,14 +50,13 @@
 				"navigationBarTitleText": "个人中心",
 				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
 				"navigationBarBackgroundColor": "#353535",
-			    "navigationBarTextStyle": "white",
+				"navigationBarTextStyle": "white",
 				"app-plus": {
 					"titleNView": {
 						"bounce": "none",
 						"autoBackButton": true,
 						"homeButton": true,
-						"buttons": [
-							{
+						"buttons": [{
 								"type": "back",
 								"float": "left"
 							},

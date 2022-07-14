@@ -2461,30 +2461,6 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 109:
-/*!*************************************************************!*\
-  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/api/sort.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getParentName = getParentName;exports.getSecond = getSecond;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-// 获取一级分类
-function getParentName(data) {
-  console.log('run');
-  return _request.default.post('/type/getParentName', data);
-}
-
-// 获取二级分类
-function getSecond(data) {
-  console.log('run');
-  return _request.default.post('/wares/getSecond', data);
-}
-
-/***/ }),
-
 /***/ 11:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -2691,7 +2667,8 @@ function getShopList(data) {
 // request.get('',{}).then((c    式
 // 2：请求拦截器
 // 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
-var baseUrl = 'http://192.168.205.195:3000';var _default =
+// let baseUrl = 'http://192.168.205.195:3000'
+var baseUrl = 'http://192.168.205.83:3000';var _default =
 {
   get: function get(url, data) {
     return new Promise(function (resolve, reject) {
@@ -3213,6 +3190,30 @@ function resolveLocaleChain(locale) {
   return chain;
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+
+/***/ 34:
+/*!*************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/api/sort.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getParentName = getParentName;exports.getSecond = getSecond;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 获取一级分类
+function getParentName(data) {
+  console.log('run');
+  return _request.default.post('/type/getParentName', data);
+}
+
+// 获取二级分类
+function getSecond(data) {
+  console.log('run');
+  return _request.default.post('/wares/getSecond', data);
+}
 
 /***/ }),
 
@@ -9277,7 +9278,7 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 73:
+/***/ 74:
 /*!********************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \********************************************************************************************************************/
@@ -9285,9 +9286,9 @@ internalMixin(Vue);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 74));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 75));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 76));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 75));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 76));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 77));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -9295,7 +9296,7 @@ var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 7
 
 /***/ }),
 
-/***/ 74:
+/***/ 75:
 /*!*******************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \*******************************************************************************************************************/
@@ -9306,7 +9307,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 75:
+/***/ 76:
 /*!************************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \************************************************************************************************************************/
@@ -9317,7 +9318,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 76:
+/***/ 77:
 /*!************************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \************************************************************************************************************************/
@@ -9328,7 +9329,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
-/***/ 98:
+/***/ 99:
 /*!*****************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \*****************************************************************************************************/

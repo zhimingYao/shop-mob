@@ -1,7 +1,7 @@
 <template>
 	<div class="content">
 		<div class="list">
-			<shop @click.native="linkDetail" :shop="item" v-for="item in shopList" :key="item.Id"></shop>
+			<shop @click.native="linkDetail" :shop="item" v-for="item in shopList"  :key="item.Id"></shop>
 		</div>
 	</div>
 </template>
