@@ -8,19 +8,20 @@
 		// 相当于路由配置
 		// 有一个也页面，就需要配置pages
 		{
-			"path": "pages/index/index", // 页面代码
+			"path": "pages/home/home", // 页面代码
 			"style": { // 页面样式，导航条 背景色
-				// "navigationBarTitleText": "主页" ,// 导航文本内容
 				"navigationBarBackgroundColor": "#323232",
 				"navigationBarTextStyle": "white",
 				"titleImage": "static/img/homeTop.png",
+				"enablePullDownRefresh": false,
+				// "navigationStyle":"custom",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
-							"text": "+",
-							"fontSize": "24px",
-							"float": "right"
-							
+							"text": "搜索",
+							"fontSize": "14px",
+							"float": "right",
+							"onclick": "search"
 						}]
 					}
 				}
@@ -46,7 +47,23 @@
 				"navigationBarTitleText": "个人中心",
 				"navigationBarBackgroundColor": "#323232",
 				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
-				"navigationBarTextStyle": "white"
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": {
+						"bounce": "none",
+						"autoBackButton": true,
+						"homeButton": true,
+						"buttons": [{
+								"type": "back",
+								"float": "left"
+							},
+							{
+								"type": "home",
+								"float": "right"
+							}
+						]
+					}
+				}
 			}
 		},
 		{
@@ -57,35 +74,36 @@
 			}
 		},
 		{
-			"path": "components/button/button",
+			"path": "pages/search/search",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "搜索",
 				"enablePullDownRefresh": false
+				// "titleNView": {
+				// 	"searchInput": {
+				//  	"borderRadius": "15px",
+				// 		"placeholder": "输入要搜索内容"
+				// 	},
+				// 	"buttons": [{
+				// 		"text": "搜索",
+				// 		"fontSize": "16px",
+				// 		"width": "48px"
+				// 	}]
+				// }
 			}
-		},
-		{
-			"path": "components/test/test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+
 		}
 	],
 	"globalStyle": { // 配置全局程序样式
 		"navigationBarTextStyle": "black", // 导航文本颜色，只有白色 黑色
 		"navigationBarTitleText": "主页", // 导航默认文本信息
 		"navigationBarBackgroundColor": "#F8F8F8", // 导航背景设
-		"backgroundColor": "#F8F8F8", // 程序背景色
-		// bug: 只有小程序有效H5 APP 需要安装其他依赖包
-		"usingComponents": {
-			"iarco-button": "./components/button/button"
-		}
+		"backgroundColor": "#F8F8F8" // 程序背景色
 	},
 	// 一级页面tabBar配置
 	"tabBar": {
 		// 最多有5个一级tab 
 		"list": [{
-			"pagePath": "pages/index/index", // tabbar 加载也买你
+			"pagePath": "pages/home/home", // tabbar 加载也买你
 			"iconPath": "static/img/tabbar/home.svg", // 没选中图表
 			"text": "主页", // tabBar 文本信息
 			"selectedIconPath": "static/img/tabbar/home_active.svg" // 选中时候时候，图片			
