@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -2460,6 +2460,9 @@ uni$1;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
+<<<<<<< HEAD
+/* 2 */
+=======
 
 /***/ 11:
 /*!**********************************************************************************************************!*\
@@ -2608,6 +2611,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 2:
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
   \***********************************/
@@ -2637,6 +2641,9 @@ module.exports = g;
 
 
 /***/ }),
+<<<<<<< HEAD
+/* 3 */
+=======
 
 /***/ 24:
 /*!**************************************************************!*\
@@ -2731,6 +2738,7 @@ function http(url, method, data) {_classCallCheck(this, http);
 /***/ }),
 
 /***/ 3:
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
 /*!*************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
   \*************************************************************/
@@ -3193,8 +3201,12 @@ function resolveLocaleChain(locale) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
+<<<<<<< HEAD
+/* 4 */
+=======
 
 /***/ 4:
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -9243,16 +9255,44 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
+<<<<<<< HEAD
+/* 5 */
+/*!*********************************************************!*\
+  !*** E:/B-web/02 第二阶段.听课记录/06-23skr/shop-mo/pages.json ***!
+  \*********************************************************/
+=======
 
 /***/ 5:
+<<<<<<< HEAD
+/*!****************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/pages.json ***!
+  \****************************************************/
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+=======
 /*!************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/pages.json ***!
   \************************************************************/
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/***/ }),
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+=======
 /***/ }),
 
 /***/ 73:
@@ -10482,6 +10522,271 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     "unicode_decimal": 58929 }] };exports.default = _default;
 
 /***/ })
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
 
-}]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 12 */
+/*!***********************************************************************!*\
+  !*** E:/B-web/02 第二阶段.听课记录/06-23skr/shop-mo/components/test/index.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.vue */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+
+{
+  install: function install(Vue) {
+    Vue.component('iarco-test', _test.default);
+  } };exports.default = _default;
+
+/***/ }),
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */
+/*!**************************************************************************!*\
+  !*** E:/B-web/02 第二阶段.听课记录/06-23skr/shop-mo/components/SvgIcon/index.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+=======
+/***/ })
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _SvgIcon = _interopRequireDefault(__webpack_require__(/*! @/components/SvgIcon/SvgIcon.vue */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+
+{
+  install: function install(Vue) {
+    Vue.component('svg-icon', _SvgIcon.default);
+  } };exports.default = _default;
+
+/***/ }),
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */
+/*!***********************************************************!*\
+  !*** E:/B-web/02 第二阶段.听课记录/06-23skr/shop-mo/api/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getShopList = getShopList;var _request = _interopRequireDefault(__webpack_require__(/*! ./@/utils/request.js */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// getShopList 返回值是什么?
+function getShopList(page) {
+  return _request.default.get('/goodList', {
+    page: page });
+
+}
+
+/***/ }),
+/* 33 */
+/*!***************************************************************!*\
+  !*** E:/B-web/02 第二阶段.听课记录/06-23skr/shop-mo/utils/request.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.http = exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} // 1:普通函数二次封装
+// request.get('',{}).then((c    式
+// 2：请求拦截器
+// 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
+var baseUrl = 'http://192.168.205.20:9528/api';var _default =
+{
+  get: function get(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'get',
+        header: {}, // 配置token
+        success: function success(data) {
+          // 这里做响应拦截
+          resolve(data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  post: function post(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'post',
+        header: {}, // 配置token
+        success: function success(data) {
+          // 这里做响应拦截
+          resolve(data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  // request.http({})
+  http: function http(_ref)
+
+
+
+  {var url = _ref.url,method = _ref.method,data = _ref.data;
+    if (method === 'get') {
+      // this 是什么？？
+      this.get(url, data);
+    } else {
+      this.post(url, data);
+    }
+  } };exports.default = _default;var
+
+
+
+
+http =
+function http(url, method, data) {_classCallCheck(this, http);
+
+};exports.http = http;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ })
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
