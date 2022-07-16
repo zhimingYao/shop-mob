@@ -1,11 +1,15 @@
 <template>
 	<view>
-		购物车
+		<nologin-show></nologin-show>
 	</view>
 </template>
 
 <script>
+	import NologinShow from "@/pages/shopcar/noLoginShow.vue"
 	export default {
+		components:{
+			NologinShow
+		},
 		data() {
 			return {
 

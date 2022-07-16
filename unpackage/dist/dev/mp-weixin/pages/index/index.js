@@ -149,7 +149,7 @@ var _index = __webpack_require__(/*! @/api/index.js */ 24); //
 //
 //
 //
-var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/index/shop */ "pages/index/shop").then((function () {return resolve(__webpack_require__(/*! ./shop.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { shopList: [] };
+var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/index/shop */ "pages/index/shop").then((function () {return resolve(__webpack_require__(/*! ./shop.vue */ 78));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { shopList: [] };
   },
   components: {
     Shop: Shop },

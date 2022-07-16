@@ -28,18 +28,14 @@
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false,
 				"app-plus": {
-					"bounce": "none", //关闭窗口回弹效果
 					"titleNView": {
-						"buttons": [ //原生标题栏按钮配置,
-							{
-								"type":"back",
-								"float": "left",
-								"onclick": "goHome"
-							}
-						],
-						"backButton": { //自定义 backButton
-							"background": "#00FF00"
-						}
+						"bounce": "none",
+						"autoBackButton": true,
+						"homeButton": true,
+						"buttons": [{
+							"type": "back",
+							"float": "left"
+						}]
 					}
 				}
 			}
@@ -89,6 +85,32 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/shopcar/noLoginShow",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/walk-around/walk-around",
+			"style": {
+				"navigationBarTitleText": "新品到着",
+				"navigationBarBackgroundColor": "#353535",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"bounce": "none",
+						"autoBackButton": true,
+						"homeButton": true,
+						"buttons": [{
+							"type": "home",
+							"float": "right"
+						}]
+					}
+				}
+			}
+
 		}
 	],
 	"globalStyle": { // 配置全局程序样式

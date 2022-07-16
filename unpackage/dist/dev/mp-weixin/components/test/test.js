@@ -129,7 +129,7 @@ var _default =
 
 /***/ }),
 
-/***/ 61:
+/***/ 68:
 /*!*********************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/main.js?{"page":"components%2Ftest%2Ftest"} ***!
   \*********************************************************************************************/
@@ -147,5 +147,5 @@ wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;createPage(_test.defa
 
 /***/ })
 
-},[[61,"common/runtime","common/vendor"]]]);
+},[[68,"common/runtime","common/vendor"]]]);
 //# sourceMappingURL=../../../.sourcemap/mp-weixin/components/test/test.js.map

@@ -1,9 +1,7 @@
 {
-  "navigationBarTitleText": "购物车",
+  "navigationBarTitleText": "新品到着",
   "navigationBarBackgroundColor": "#353535",
   "navigationBarTextStyle": "white",
   "enablePullDownRefresh": false,
-  "usingComponents": {
-    "nologin-show": "/pages/shopcar/noLoginShow"
-  }
+  "usingComponents": {}
 }

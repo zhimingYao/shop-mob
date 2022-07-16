@@ -6,7 +6,9 @@
     "pages/mine/mine",
     "pages/detal/detal",
     "components/button/button",
-    "components/test/test"
+    "components/test/test",
+    "pages/shopcar/noLoginShow",
+    "pages/walk-around/walk-around"
   ],
   "subPackages": [],
   "window": {
