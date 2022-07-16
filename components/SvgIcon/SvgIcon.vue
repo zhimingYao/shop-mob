@@ -1,6 +1,6 @@
 <template>
 <!-- 当组件的根元素不具备一些DOM事件，但是根元素内部元素具备相对应的DOM事件，那么可以使用$listeners获取父组件传递进来的所有事件函数，再通过v-on="xxxx"绑定到相对应的内部元素上即可。 -->
-  <svg :class="svgClass" v-on="$listeners">
+  <svg :class="svgClass" @click.native="$listeners">
     <use :xlink:href="iconName" />
   </svg>
 </template>

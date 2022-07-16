@@ -1,1 +1,1 @@
-<view class="item _div data-v-1d0cadcc"></view>
+<view class="item _div data-v-1d0cadcc"><image src="{{shop.img}}" alt class="_img data-v-1d0cadcc"></image><view class="_div data-v-1d0cadcc">{{shop.title}}</view></view>

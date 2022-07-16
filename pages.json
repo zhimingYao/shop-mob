@@ -33,14 +33,13 @@
 				"navigationBarTitleText": "个人中心",
 				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
 				"navigationBarBackgroundColor": "#353535",
-			    "navigationBarTextStyle": "white",
+				"navigationBarTextStyle": "white",
 				"app-plus": {
 					"titleNView": {
 						"bounce": "none",
 						"autoBackButton": true,
 						"homeButton": true,
-						"buttons": [
-							{
+						"buttons": [{
 								"type": "back",
 								"float": "left"
 							},
@@ -72,6 +71,29 @@
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "components/login/login",
+			"style": {
+						"app-plus": {
+							"titleNView": false  //禁用原生导航栏
+						}
+					}
+		},
+		{
+			"path": "components/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+			}
+		},{
+			"path": "components/resetpsd/resetpsd",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#444444",
+				"navigationBarTextStyle": "white"
 			}
 		}
 	],
