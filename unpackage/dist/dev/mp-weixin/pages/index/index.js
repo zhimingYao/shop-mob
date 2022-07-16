@@ -265,7 +265,7 @@ var _index = __webpack_require__(/*! @/api/index.js */ 24); //
 //
 //
 //
-var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/index/shop */ "pages/index/shop").then((function () {return resolve(__webpack_require__(/*! ./shop.vue */ 61));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { shopList: [] };
+var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/index/shop */ "pages/index/shop").then((function () {return resolve(__webpack_require__(/*! ./shop.vue */ 78));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { shopList: [] };
   },
   components: {
     Shop: Shop },
@@ -286,7 +286,11 @@ var Shop = function Shop() {__webpack_require__.e(/*! require.ensure | pages/ind
     getShopList: function getShopList() {var _this = this;
       console.log('get shop list run ');
       // 发送请求
-      (0, _index.getShopList)(1).then(function (res) {
+      var data = {
+        store_id: '1' };
+
+      (0, _index.getShopList)(data).then(function (res) {
+        console.log(res);
         _this.shopList = res.data;
       });
 
