@@ -2,11 +2,19 @@
   // launchtype项可配置值为local或remote, local代表前端连本地云函数，remote代表前端连云端云函数
     "version": "0.0",
     "configurations": [{
+<<<<<<< HEAD
      	"app-plus" : 
      	{
      		"launchtype" : "local"
      	},
      	"default" : 
+=======
+     	"default" : 
+     	{
+     		"launchtype" : "local"
+     	},
+     	"mp-weixin" : 
+>>>>>>> b7f1af7853e0c303b6fd5fff296bbf4822089c35
      	{
      		"launchtype" : "local"
      	},
