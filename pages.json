@@ -102,6 +102,7 @@
 	// 一级页面tabBar配置
 	"tabBar": {
 		// 最多有5个一级tab 
+		//#ifndef MP-WEIXIN
 		"list": [{
 			"pagePath": "pages/home/home", // tabbar 加载也买你
 			"iconPath": "static/img/tabbar/home.svg", // 没选中图表
@@ -123,6 +124,7 @@
 			"text": "我的",
 			"selectedIconPath": "static/img/tabbar/profile_active.svg"
 		}],
+		//#endif
 		"color": "#7A7E83", // tabBar 默认文本字体演示
 		"selectedColor": "#2b2b2b", // 选中字体颜色
 		"fontSize": "12px"
