@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<button>这是一个全局组件</button>
+		
 	</view>
 </template>
 

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <view>个人主页<view><navigator url="/components/login/login"><button>登录</button></navigator></view></view>
+=======
+<view></view>
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe

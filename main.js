@@ -4,13 +4,10 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
+import ShopView from '@/components/ShopView/shopview.js'
 
 App.mpType = 'app'
-
-import test from '@/components/test/index.js'
-// import SvgIcon from '@/components/SvgIcon/index.js'
-Vue.use(test)
-// Vue.use(SvgIcon)
+Vue.use(ShopView)
 
 const app = new Vue({
 	...App

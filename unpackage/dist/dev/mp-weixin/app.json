@@ -7,13 +7,17 @@
     "pages/detal/detal",
     "components/button/button",
     "components/test/test",
+<<<<<<< HEAD
     "components/login/login",
     "components/register/register"
+=======
+    "pages/shopcar/noLoginShow",
+    "pages/walk-around/walk-around"
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
@@ -21,7 +25,16 @@
     "list": [
       {
         "pagePath": "pages/index/index",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "iconPath": "./static/icon/finder.png",
+        "text": "主页",
+        "selectedIconPath": "./static/icon/selectfinder.png"
+=======
+        "iconPath": "static/img/tabbar/home.svg",
+=======
         "iconPath": "static/img/tabbar/home.jpg",
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
         "text": "主页",
         "selectedIconPath": "static/img/tabbar/home_active.jpg"
       },
@@ -29,6 +42,13 @@
         "pagePath": "pages/sort/sort",
         "iconPath": "static/img/tabbar/type.jpg",
         "selectedIconPath": "static/img/tabbar/type_active.jpg",
+        "text": "分类"
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "./static/icon/music.png",
+        "selectedIconPath": "./static/icon/selectmusic.png",
         "text": "分类"
       },
       {
@@ -39,9 +59,21 @@
       },
       {
         "pagePath": "pages/mine/mine",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "iconPath": "./static/icon/min.png",
+        "text": "我的",
+        "selectedIconPath": "./static/icon/selectmin.png"
+=======
+        "iconPath": "static/img/tabbar/profile.svg",
+        "text": "我的",
+        "selectedIconPath": "static/img/tabbar/profile_active.svg"
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+=======
         "iconPath": "static/img/tabbar/profile.jpg",
         "text": "我的",
         "selectedIconPath": "static/img/tabbar/profile_active.jpg"
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
       }
     ],
     "color": "#7A7E83",

@@ -2,7 +2,10 @@
 // request.get('',{}).then((c    式
 // 2：请求拦截器
 // 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
-let baseUrl = 'http://192.168.205.61:3000'
+
+// let baseUrl = 'http://192.168.205.61:3000'
+// let baseUrl = 'http://192.168.205.195:3000'
+let baseUrl = 'http://192.168.205.95:3000'
 export default {
 	get(url, data) {
 		return new Promise((resolve, reject) => {
@@ -30,6 +33,15 @@ export default {
 				header: {}, // 配置token
 				success: (res) => {
 					// 这里做响应拦截
+					// loading
+					uni.showLoading({
+						"title":"loading",
+						success() {
+							setTimeout(()=>{
+								uni.hideLoading()
+							},1000)
+						}
+					})
 					resolve(res.data)
 				},
 				fail: (err) => {
