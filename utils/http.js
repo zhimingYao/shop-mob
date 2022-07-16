@@ -1,6 +1,6 @@
 import axios from './@/utils/axios.js'
 
-export default const serve = axios({
+export const serve = axios({
 	baseUrl:'http://192.168.205.20:0528/api',
 	timeOut: 5000
 })
