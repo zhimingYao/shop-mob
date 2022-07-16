@@ -58,7 +58,6 @@
 			"path": "pages/mine/mine",
 			"style": {
 				"navigationBarTitleText": "个人中心",
-				"navigationBarBackgroundColor": "#323232",
 				"enablePullDownRefresh": false, // 个人中心页，是否启动下拉刷新，默认不启动
 				"navigationBarBackgroundColor": "#353535",
 				"navigationBarTextStyle": "white",
