@@ -1400,7 +1400,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2593,10 +2593,17 @@ function normalizeComponent (
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ 116:
+/*!************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \************************************************************************************/
+=======
 /***/ 115:
 /*!*****************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \*****************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3771,9 +3778,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 12:
-/*!**************************************************************************!*\
-  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/components/test/index.js ***!
-  \**************************************************************************/
+/*!*********************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/components/test/index.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4636,9 +4643,9 @@ module.exports = g;
 =======
 
 /***/ 24:
-/*!**************************************************************!*\
-  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/api/index.js ***!
-  \**************************************************************/
+/*!*********************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/index.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4653,9 +4660,9 @@ function getShopList(data) {
 /***/ }),
 
 /***/ 25:
-/*!******************************************************************!*\
-  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/utils/request.js ***!
-  \******************************************************************/
+/*!*************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/utils/request.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4664,8 +4671,12 @@ function getShopList(data) {
 // request.get('',{}).then((c    式
 // 2：请求拦截器
 // 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
+<<<<<<< HEAD
+var baseUrl = 'http://192.168.205.61:3000';var _default =
+=======
 // let baseUrl = 'http://192.168.205.195:3000'
 var baseUrl = 'http://192.168.205.83:3000';var _default =
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 {
   get: function get(url, data) {
     return new Promise(function (resolve, reject) {
@@ -10745,7 +10756,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -10766,14 +10777,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -10859,7 +10870,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -11277,6 +11288,11 @@ internalMixin(Vue);
 
 /***/ 5:
 <<<<<<< HEAD
+/*!*******************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/pages.json ***!
+  \*******************************************/
+=======
+<<<<<<< HEAD
 /*!****************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp/app/pages.json ***!
   \****************************************************/
@@ -11286,6 +11302,7 @@ internalMixin(Vue);
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/pages.json ***!
   \************************************************************/
 >>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11308,17 +11325,69 @@ internalMixin(Vue);
 =======
 /***/ }),
 
+<<<<<<< HEAD
+/***/ 67:
+/*!*********************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/login.js ***!
+  \*********************************************/
+=======
 /***/ 90:
 /*!********************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
   \********************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
+Object.defineProperty(exports, "__esModule", { value: true });exports.getLogin = getLogin;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 登录
+function getLogin(data) {
+  return _request.default.post('/user/login', data);
+}
+
+/***/ }),
+
+/***/ 76:
+/*!************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/register.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getRegister = getRegister;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 获取6位随机数
+// export function getMessage(data) {
+// 	return request.post('/user/getMessage', data)
+// }
+
+// 注册
+function getRegister(data) {
+  return _request.default.post('/user/register', data);
+}
+
+/***/ }),
+
+/***/ 91:
+/*!***************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 92));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 93));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 94));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+=======
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 91));
 var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 92));
 var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 93));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -11326,10 +11395,17 @@ var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 9
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ 92:
+/*!**************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \**************************************************************************************************/
+=======
 /***/ 91:
 /*!*******************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
   \*******************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
@@ -11337,10 +11413,17 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ 93:
+/*!*******************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
+  \*******************************************************************************************************/
+=======
 /***/ 92:
 /*!************************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
   \************************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
@@ -11348,15 +11431,24 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ 94:
+/*!*******************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
+  \*******************************************************************************************************/
+=======
 /***/ 93:
 /*!************************************************************************************************************************!*\
   !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
   \************************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"請輸入搜索內容\"}");
 
+<<<<<<< HEAD
+=======
 /***/ })
 >>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
 
@@ -11623,6 +11715,7 @@ function http(url, method, data) {_classCallCheck(this, http);
 };exports.http = http;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

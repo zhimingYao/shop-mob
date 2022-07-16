@@ -134,7 +134,29 @@
 					}
 				}
 			}
-
+		},
+		{
+			"path": "components/login/login",
+			"style": {
+						"app-plus": {
+							"titleNView": false  //禁用原生导航栏
+						}
+					}
+		},
+		{
+			"path": "components/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+			}
+		},{
+			"path": "components/resetpsd/resetpsd",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#444444",
+				"navigationBarTextStyle": "white"
+			}
 		}
 	    ,{
             "path" : "pages/order/order",
@@ -145,7 +167,7 @@
             }
             
         }
-    ],
+    ],       
 	"globalStyle": { // 配置全局程序样式
 		"navigationBarTextStyle": "black", // 导航文本颜色，只有白色 黑色
 		"navigationBarTitleText": "主页", // 导航默认文本信息
