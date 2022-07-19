@@ -4,23 +4,23 @@
 			<view class="content">
 				<view class="has-login" v-if="login">
 					<view class="avatar">
-						<img :src="tzof" alt="123" @click="userpage">
+						<img :src="userinfo.avatar" alt="123" @click="userpage">
 					</view>
 					<view class="info">
-						<p>aaa</p>
-						<span>#1243204919@qq.com#</span>
+						<p>{{userinfo.username}}</p>
+						<span>#{{userinfo.email}}#</span>
 					</view>
 					<view class="QR-code">
 						<view class="QR-icon" @click="QRcode()">
 							<img :src="mean" alt="12">
 						</view>
 					</view>
-					<view class="bg"></view>
 				</view>
-				<view class="go-login" v-else>
+				<view v-else class="go-login" @click="gologin">
 					<span>登录/注册</span>
 				</view>
 			</view>
+			<view class="bg"></view>
 		</view>
 		<view class="user-do">
 			<view class="main">
@@ -105,17 +105,24 @@
 		</view>
 		<view class="similar-shop">
 			<view class="title">
-				<h3><span>|</span>为你优选</h3>
+				<ul>
+					<li>
+						<span>|</span><h3>为你优选</h3>
+					</li>
+					<li>
+						<h3><i></i></h3>
+					</li>
+				</ul>
 			</view>
 			<view class="shoplist">
-
+				<shop-view :shopDate="shopData"></shop-view>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
-	import tzof from "@/static/img/usercenter/tzof.png"
+	import avatar from "@/static/img/usercenter/tzof.png"
 	import mean from "@/static/img/usercenter/二维码.png"
 	import Order from "@/pages/mine/order/index.vue"
 	import voucher from "@/static/img/usercenter/优惠劵.png"
@@ -124,11 +131,21 @@
 	import customer from "@/static/img/usercenter/客服.png"
 	import active_1 from "@/static/img/usercenter/活动1.jpg"
 	import active_2 from "@/static/img/usercenter/活动2.jpg"
+	import { getShopList } from "@/api/index.js"
 	export default {
 		data() {
 			return {
-				login: true,
-				tzof: tzof,
+				userinfo:{
+					avatar,
+					create_time: 1618467214720,
+					email: "303195840@qq.com",
+					id: 4,
+					last_update_time: null,
+					nickname: "1618467214720",
+					tel: null,
+					username: "aaa",
+				},
+				login: false,
 				mean: mean,
 				voucher,
 				money,
@@ -136,6 +153,7 @@
 				customer,
 				active_1,
 				active_2,
+				shopData:[],
 			}
 		},
 		components:{
@@ -162,10 +180,40 @@
 			},
 			walletpage(){
 				console.log('777');
+			},
+			getShopList(){
+				getShopList({store_id:'1'}).then((res)=>{
+					console.log(res);
+					this.shopData = res.data
+				})
+			},
+			gologin(){
+				uni.navigateTo({
+					url:"/pages/login/login"
+				})
 			}
 		},
+		created() {
+			this.getShopList()
+			let login = null
+			new Promise((resolve,reject)=>{
+				uni.getStorage({
+					key: 'user',
+					success: async function (res) {
+						console.log(res.data,'11232141');
+						resolve(res.data)
+					}
+				})
+			}).then(res=>{
+				console.log(res);
+				login = res;
+				this.login = login !== null;
+				this.userinfo = login.userInfo
+				this.$forceUpdate()
+			})
+		},
 		onNavigationBarButtonTap(e) {
-			console.log(e);
+			// console.log(e);
 			let eventName = e.onclick;
 			if (eventName == 'myback') {
 				this.myback()
@@ -204,7 +252,7 @@
 
 		.content {
 			position: absolute;
-			border: 1px solid #f0f0f0;
+			// border: 1px solid #f0f0f0;
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
@@ -221,10 +269,12 @@
 
 				.avatar {
 					width: 15%;
+					// border: 1px solid #fff;
 					img {
 						width: 100%;
 						height: 100%;
 						border-radius: 50% 50%;
+						border: 1px solid #fff;
 					}
 				}
 
@@ -237,12 +287,15 @@
 				}
 
 				.QR-code {
-					width: 10%;
+					width: 5%;
+					height: 50%;
 					position: relative;
 					img {
-						width: 50%;
+						width: 100%;
+						height: 100%;
 						position: absolute;
 						right: 0;
+						border: 1px solid #fff;
 					}
 				}
 			}
@@ -257,7 +310,7 @@
 				padding: 2.3vh 0;
 
 				span {
-					border: 1px solid #fff;
+					border: 1px solid #f0f0f0;
 					margin: 0 auto;
 					padding: 0.6vh 10%;
 					font-size: 14px;
@@ -301,12 +354,14 @@
 				margin-bottom: 1.5vh;
 				img{
 					width: 100%;
+					height: 20vh;
 				}
 			}
 			
 			.img_2 {
 				img{
 					width: 100%;
+					height: 30vh;
 				}
 			}
 		}
@@ -338,6 +393,9 @@
 					font-size: 16px;
 					font-weight: 400;
 					font-family: "宋体";
+					i{
+						display: inline;
+					}
 				}
 			}
 		}

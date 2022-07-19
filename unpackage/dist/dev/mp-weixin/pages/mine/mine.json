@@ -3,5 +3,7 @@
   "enablePullDownRefresh": false,
   "navigationBarBackgroundColor": "#353535",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "order": "/pages/mine/order/index"
+  }
 }

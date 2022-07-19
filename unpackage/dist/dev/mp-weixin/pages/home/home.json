@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#323232",
+  "navigationBarTextStyle": "white",
+  "titleImage": "static/img/homeTop.png",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "home-top": "/pages/home/components/homeTop",
+    "swiper": "/pages/home/components/swiper",
+    "two-bar": "/pages/home/components/homeTwoBar",
+    "shop": "/pages/home/components/shop"
+  }
+}

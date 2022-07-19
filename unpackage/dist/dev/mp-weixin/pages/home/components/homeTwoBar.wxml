@@ -1,0 +1,1 @@
+<view class="twoBar data-v-d6c401f0"><view class="_ul data-v-d6c401f0"><block wx:for="{{icons_wrapper}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="_li data-v-d6c401f0"><view class="data-v-d6c401f0"><image src="{{item.img}}" mode class="data-v-d6c401f0"></image></view><view class="_p data-v-d6c401f0">{{item.text}}</view></view></block></view></view>

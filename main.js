@@ -5,9 +5,11 @@ import App from './App'
 // #ifndef VUE3
 import Vue from 'vue'
 import ShopView from '@/components/ShopView/shopview.js'
+import verify from "@/components/verify/verify.js"
 
 App.mpType = 'app'
 Vue.use(ShopView)
+Vue.use(verify)
 
 const app = new Vue({
 	...App
