@@ -79,7 +79,9 @@
 <style lang="scss" scoped>
 	.order{
 		width: 100%;
+		//#ifdef MP-WEIXIN
 		height: 40vh;
+		//#endif
 		background-color: #fff;
 		.orderinfo{
 			border-top: 2px solid #e3e3e3;

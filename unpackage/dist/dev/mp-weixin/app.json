@@ -5,7 +5,6 @@
     "pages/shopcar/shopcar",
     "pages/mine/mine",
     "pages/detal/detal",
-<<<<<<< HEAD
     "pages/search/search",
     "pages/shopcar/noLoginShow",
     "pages/walk-around/walk-around",
@@ -13,17 +12,6 @@
     "pages/login/login",
     "pages/register/register",
     "pages/resetpsd/resetpsd"
-=======
-    "components/button/button",
-    "components/test/test",
-<<<<<<< HEAD
-    "components/login/login",
-    "components/register/register"
-=======
-    "pages/shopcar/noLoginShow",
-    "pages/walk-around/walk-around"
->>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
->>>>>>> master
   ],
   "subPackages": [],
   "window": {
@@ -63,5 +51,6 @@
     "selectedColor": "#2b2b2b",
     "fontSize": "12px"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }
