@@ -79,6 +79,7 @@
 <style lang="scss" scoped>
 	.order{
 		width: 100%;
+		height: 40vh;
 		background-color: #fff;
 		.orderinfo{
 			border-top: 2px solid #e3e3e3;
@@ -88,11 +89,13 @@
 				display: flex;
 				justify-content: space-evenly;
 				li{
-					width: 30%;
+					width: 100%;
+					height: 100%;
 					view{
 						text-align: center;
 						img{
 							width: 20%;
+							height: 20px;
 						}
 						span{
 							display: block;
@@ -110,12 +113,26 @@
 		ul {
 			display: flex;
 			justify-content: space-between;
-	
+			
 			li {
+				display: flex;
+				align-items: center;
+				flex-wrap: nowrap;
+				img{
+					position: relative;
+					top: 0;
+					width: 8vw;
+					height: 4vh;
+					padding: 0 2vw;
+					overflow: hidden;
+				}
 				h3 {
 					font-size: 16px;
 					font-weight: 400;
 					font-family: "宋体";
+					i{
+						display: inline;
+					}
 				}
 			}
 		}

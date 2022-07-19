@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "主页",
-  "usingComponents": {
-    "shop": "/pages/index/shop"
-  }
-}

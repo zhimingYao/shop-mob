@@ -82,7 +82,7 @@
 						]
 					}
 				}
-				
+
 			}
 		},
 		{
@@ -134,6 +134,39 @@
 					}
 				}
 			}
+<<<<<<< HEAD
+
+		}, {
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/resetpsd/resetpsd",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+			}
+=======
 		},
 		{
 			"path": "components/login/login",
@@ -165,41 +198,43 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-            
-        }
-    ],       
+>>>>>>> master
+
+		}
+	],
 	"globalStyle": { // 配置全局程序样式
 		"navigationBarTextStyle": "black", // 导航文本颜色，只有白色 黑色
 		"navigationBarTitleText": "主页", // 导航默认文本信息
 		"navigationBarBackgroundColor": "#F8F8F8", // 导航背景设
 		"backgroundColor": "#F8F8F8" // 程序背景色
+
 	},
 	// 一级页面tabBar配置
 	"tabBar": {
 		// 最多有5个一级tab 
-		//#ifndef MP-WEIXIN
-		"list": [{
-			"pagePath": "pages/home/home", // tabbar 加载也买你
-			"iconPath": "static/img/tabbar/home.svg", // 没选中图表
-			"text": "主页", // tabBar 文本信息
-			"selectedIconPath": "static/img/tabbar/home_active.svg" // 选中时候时候，图片			
-		}, {
-			"pagePath": "pages/sort/sort",
-			"iconPath": "static/img/tabbar/type.svg",
-			"selectedIconPath": "static/img/tabbar/type_active.svg",
-			"text": "分类"
-		}, {
-			"pagePath": "pages/shopcar/shopcar",
-			"iconPath": "static/img/tabbar/shopcar.svg",
-			"selectedIconPath": "static/img/tabbar/shopcar_active.svg",
-			"text": "购物车"
-		}, {
-			"pagePath": "pages/mine/mine",
-			"iconPath": "static/img/tabbar/profile.svg",
-			"text": "我的",
-			"selectedIconPath": "static/img/tabbar/profile_active.svg"
-		}],
-		//#endif
+		"list": [
+			{
+				"pagePath": "pages/home/home", // tabbar 加载也买你
+				"iconPath": "static/img/tabbar/home.jpg", // 没选中图表
+				"text": "主页", // tabBar 文本信息
+				"selectedIconPath": "static/img/tabbar/home_active.jpg" // 选中时候时候，图片			
+			}, {
+				"pagePath": "pages/sort/sort",
+				"iconPath": "static/img/tabbar/type.jpg",
+				"selectedIconPath": "static/img/tabbar/type_active.jpg",
+				"text": "分类"
+			}, {
+				"pagePath": "pages/shopcar/shopcar",
+				"iconPath": "static/img/tabbar/shopcar.jpg",
+				"selectedIconPath": "static/img/tabbar/shopcar_active.jpg",
+				"text": "购物车"
+			}, {
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/img/tabbar/profile.jpg",
+				"text": "我的",
+				"selectedIconPath": "static/img/tabbar/profile_active.jpg"
+			}],
+
 		"color": "#7A7E83", // tabBar 默认文本字体演示
 		"selectedColor": "#2b2b2b", // 选中字体颜色
 		"fontSize": "12px"
