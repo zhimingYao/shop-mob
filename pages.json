@@ -134,8 +134,6 @@
 					}
 				}
 			}
-<<<<<<< HEAD
-
 		}, {
 			"path": "pages/order/order",
 			"style": {
@@ -166,40 +164,6 @@
 				"enablePullDownRefresh": false,
 				"navigationBarBackgroundColor": "#fff"
 			}
-=======
-		},
-		{
-			"path": "components/login/login",
-			"style": {
-						"app-plus": {
-							"titleNView": false  //禁用原生导航栏
-						}
-					}
-		},
-		{
-			"path": "components/register/register",
-			"style": {
-				"navigationBarTitleText": "注册",
-				"enablePullDownRefresh": false
-			}
-		},{
-			"path": "components/resetpsd/resetpsd",
-			"style": {
-				"navigationBarTitleText": "修改密码",
-				"enablePullDownRefresh": false,
-				"navigationBarBackgroundColor": "#444444",
-				"navigationBarTextStyle": "white"
-			}
-		}
-	    ,{
-            "path" : "pages/order/order",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
->>>>>>> master
-
 		}
 	],
 	"globalStyle": { // 配置全局程序样式

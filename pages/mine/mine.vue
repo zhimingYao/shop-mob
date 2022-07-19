@@ -361,7 +361,7 @@
 			.img_2 {
 				img{
 					width: 100%;
-					height: 30vh;
+					height: 25vh;
 				}
 			}
 		}
