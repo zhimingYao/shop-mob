@@ -2590,6 +2590,7 @@ function normalizeComponent (
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 113:
 /*!******************************************************************************!*\
   !*** D:/课程/学习/编程/前端/浩鲸/uni-app/项目/shop-mo/static/img/usercenter/用户名-登录页.png ***!
@@ -2859,6 +2860,19 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACt
 /*!************************************************************************************************!*\
   !*** D:/课程/学习/编程/前端/浩鲸/uni-app/项目/shop-mo/uni_modules/uni-icons/components/uni-icons/icons.js ***!
   \************************************************************************************************/
+=======
+<<<<<<< HEAD
+/***/ 116:
+/*!************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \************************************************************************************/
+=======
+/***/ 115:
+/*!*****************************************************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \*****************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+>>>>>>> master
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4032,10 +4046,34 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 26:
 /*!*************************************************************************!*\
   !*** D:/课程/学习/编程/前端/浩鲸/uni-app/项目/shop-mo/static/img/usercenter/加载.png ***!
   \*************************************************************************/
+=======
+/***/ 12:
+/*!*********************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/components/test/index.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.vue */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+
+{
+  install: function install(Vue) {
+    Vue.component('iarco-test', _test.default);
+  } };exports.default = _default;
+
+/***/ }),
+
+/***/ 128:
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+>>>>>>> master
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4697,6 +4735,7 @@ function isRegExp (v) {
   return _toString.call(v) === '[object RegExp]'
 }
 
+<<<<<<< HEAD
 /**
  * Check if val is a valid array index.
  */
@@ -4704,6 +4743,19 @@ function isValidArrayIndex (val) {
   var n = parseFloat(String(val));
   return n >= 0 && Math.floor(n) === n && isFinite(val)
 }
+=======
+/***/ }),
+<<<<<<< HEAD
+/* 3 */
+=======
+
+/***/ 24:
+/*!*********************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master
 
 function isPromise (val) {
   return (
@@ -4733,6 +4785,7 @@ function toNumber (val) {
   return isNaN(n) ? val : n
 }
 
+<<<<<<< HEAD
 /**
  * Make a map and return a function for checking if a key
  * is in that map.
@@ -4745,6 +4798,335 @@ function makeMap (
   var list = str.split(',');
   for (var i = 0; i < list.length; i++) {
     map[list[i]] = true;
+=======
+/***/ 25:
+/*!*************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/utils/request.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.http = exports.default = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}} // 1:普通函数二次封装
+// request.get('',{}).then((c    式
+// 2：请求拦截器
+// 3：响应拦截器，对服务器返回状态码统一拦截，统一处理
+<<<<<<< HEAD
+var baseUrl = 'http://192.168.205.61:3000';var _default =
+=======
+// let baseUrl = 'http://192.168.205.195:3000'
+var baseUrl = 'http://192.168.205.83:3000';var _default =
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+{
+  get: function get(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'get',
+        header: {}, // 配置token
+        success: function success(res) {
+          // 这里做响应拦截
+          resolve(res.data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  post: function post(url, data) {
+    return new Promise(function (resolve, reject) {
+      uni.request({
+        data: data,
+        url: baseUrl + url,
+        method: 'post',
+        header: {}, // 配置token
+        success: function success(res) {
+          // 这里做响应拦截
+          resolve(res.data);
+        },
+        fail: function fail(err) {
+          reject(err);
+        } });
+
+    });
+  },
+  // request.http({})
+  http: function http(_ref)
+
+
+
+  {var url = _ref.url,method = _ref.method,data = _ref.data;
+    if (method === 'get') {
+      // this 是什么？？
+      this.get(url, data);
+    } else {
+      this.post(url, data);
+    }
+  } };exports.default = _default;var
+
+
+
+
+http =
+function http(url, method, data) {_classCallCheck(this, http);
+
+};exports.http = http;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 3:
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+/*!*************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
+var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
+var defaultDelimiters = ['{', '}'];var
+BaseFormatter = /*#__PURE__*/function () {
+  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
+    this._caches = Object.create(null);
+  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
+    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
+      if (!values) {
+        return [message];
+      }
+      var tokens = this._caches[message];
+      if (!tokens) {
+        tokens = parse(message, delimiters);
+        this._caches[message] = tokens;
+      }
+      return compile(tokens, values);
+    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
+  var tokens = [];
+  var position = 0;
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === startDelimiter) {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== endDelimiter) {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === endDelimiter;
+      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
+      'list' :
+      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
+      'named' :
+      'unknown';
+      tokens.push({ value: sub, type: type });
+    }
+    //  else if (char === '%') {
+    //   // when found rails i18n syntax, skip text capture
+    //   if (format[position] !== '{') {
+    //     text += char
+    //   }
+    // }
+    else {
+        text += char;
+      }
+  }
+  text && tokens.push({ type: 'text', value: text });
+  return tokens;
+}
+function compile(tokens, values) {
+  var compiled = [];
+  var index = 0;
+  var mode = isArray(values) ?
+  'list' :
+  isObject(values) ?
+  'named' :
+  'unknown';
+  if (mode === 'unknown') {
+    return compiled;
+  }
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break;
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break;
+      case 'named':
+        if (mode === 'named') {
+          compiled.push(values[token.value]);
+        } else
+        {
+          if (true) {
+            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
+          }
+        }
+        break;
+      case 'unknown':
+        if (true) {
+          console.warn("Detect 'unknown' type of token!");
+        }
+        break;}
+
+    index++;
+  }
+  return compiled;
+}
+
+var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
+var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
+var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
+var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
+var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
+var defaultFormatter = new BaseFormatter();
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}var
+I18n = /*#__PURE__*/function () {
+  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
+    this.locale = LOCALE_EN;
+    this.fallbackLocale = LOCALE_EN;
+    this.message = {};
+    this.messages = {};
+    this.watchers = [];
+    if (fallbackLocale) {
+      this.fallbackLocale = fallbackLocale;
+    }
+    this.formater = formater || defaultFormatter;
+    this.messages = messages || {};
+    this.setLocale(locale || LOCALE_EN);
+    if (watcher) {
+      this.watchLocale(watcher);
+    }
+  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
+    locale) {var _this = this;
+      var oldLocale = this.locale;
+      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
+      if (!this.messages[this.locale]) {
+        // 可能初始化时不存在
+        this.messages[this.locale] = {};
+      }
+      this.message = this.messages[this.locale];
+      // 仅发生变化时，通知
+      if (oldLocale !== this.locale) {
+        this.watchers.forEach(function (watcher) {
+          watcher(_this.locale, oldLocale);
+        });
+      }
+    } }, { key: "getLocale", value: function getLocale()
+    {
+      return this.locale;
+    } }, { key: "watchLocale", value: function watchLocale(
+    fn) {var _this2 = this;
+      var index = this.watchers.push(fn) - 1;
+      return function () {
+        _this2.watchers.splice(index, 1);
+      };
+    } }, { key: "add", value: function add(
+    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var curMessages = this.messages[locale];
+      if (curMessages) {
+        if (override) {
+          Object.assign(curMessages, message);
+        } else
+        {
+          Object.keys(message).forEach(function (key) {
+            if (!hasOwn(curMessages, key)) {
+              curMessages[key] = message[key];
+            }
+          });
+        }
+      } else
+      {
+        this.messages[locale] = message;
+      }
+    } }, { key: "f", value: function f(
+    message, values, delimiters) {
+      return this.formater.interpolate(message, values, delimiters).join('');
+    } }, { key: "t", value: function t(
+    key, locale, values) {
+      var message = this.message;
+      if (typeof locale === 'string') {
+        locale = normalizeLocale(locale, this.messages);
+        locale && (message = this.messages[locale]);
+      } else
+      {
+        values = locale;
+      }
+      if (!hasOwn(message, key)) {
+        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
+        return key;
+      }
+      return this.formater.interpolate(message[key], values).join('');
+    } }]);return I18n;}();exports.I18n = I18n;
+
+
+function watchAppLocale(appVm, i18n) {
+  // 需要保证 watch 的触发在组件渲染之前
+  if (appVm.$watchLocale) {
+    // vue2
+    appVm.$watchLocale(function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  } else
+  {
+    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  }
+}
+function getDefaultLocale() {
+  if (typeof uni !== 'undefined' && uni.getLocale) {
+    return uni.getLocale();
+  }
+  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
+  if (typeof global !== 'undefined' && global.getLocale) {
+    return global.getLocale();
+>>>>>>> master
   }
   return expectsLowerCase
     ? function (val) { return map[val.toLowerCase()]; }
@@ -10808,6 +11190,7 @@ function getShopList(data) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 95:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -10849,9 +11232,26 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
+=======
+function flushCallbacks$1(vm) {
+    if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
+        if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            var mpInstance = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
+                ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
+        }
+        var copies = vm.__next_tick_callbacks.slice(0);
+        vm.__next_tick_callbacks.length = 0;
+        for (var i = 0; i < copies.length; i++) {
+            copies[i]();
+        }
+    }
+}
+>>>>>>> master
 
 module.exports = __webpack_require__(/*! ./runtime */ 97);
 
+<<<<<<< HEAD
 if (hadRuntime) {
   // Restore the original runtime.
   g.regeneratorRuntime = oldRuntime;
@@ -10862,6 +11262,46 @@ if (hadRuntime) {
   } catch(e) {
     g.regeneratorRuntime = undefined;
   }
+=======
+function nextTick$1(vm, cb) {
+    //1.nextTick 之前 已 setData 且 setData 还未回调完成
+    //2.nextTick 之前存在 render watcher
+    if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
+        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
+                ']:nextVueTick');
+        }
+        return nextTick(cb, vm)
+    }else{
+        if(Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+            var mpInstance$1 = vm.$scope;
+            console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
+                ']:nextMPTick');
+        }
+    }
+    var _resolve;
+    if (!vm.__next_tick_callbacks) {
+        vm.__next_tick_callbacks = [];
+    }
+    vm.__next_tick_callbacks.push(function () {
+        if (cb) {
+            try {
+                cb.call(vm);
+            } catch (e) {
+                handleError(e, vm, 'nextTick');
+            }
+        } else if (_resolve) {
+            _resolve(vm);
+        }
+    });
+    // $flow-disable-line
+    if (!cb && typeof Promise !== 'undefined') {
+        return new Promise(function (resolve) {
+            _resolve = resolve;
+        })
+    }
+>>>>>>> master
 }
 
 
@@ -10937,7 +11377,31 @@ if (hadRuntime) {
     try {
       return { type: "normal", arg: fn.call(obj, arg) };
     } catch (err) {
+<<<<<<< HEAD
       return { type: "throw", arg: err };
+=======
+      console.error(err);
+    }
+    data.__webviewId__ = mpInstance.data.__webviewId__;
+    var mpData = Object.create(null);
+    Object.keys(data).forEach(function (key) { //仅同步 data 中有的数据
+      mpData[key] = mpInstance.data[key];
+    });
+    var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
+    if (Object.keys(diffData).length) {
+      if (Object({"VUE_APP_NAME":"app","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
+          ']差量更新',
+          JSON.stringify(diffData));
+      }
+      this.__next_tick_pending = true;
+      mpInstance.setData(diffData, function () {
+        this$1.__next_tick_pending = false;
+        flushCallbacks$1(this$1);
+      });
+    } else {
+      flushCallbacks$1(this);
+>>>>>>> master
     }
   }
 
@@ -11348,12 +11812,34 @@ if (hadRuntime) {
     };
   };
 
+<<<<<<< HEAD
   function values(iterable) {
     if (iterable) {
       var iteratorMethod = iterable[iteratorSymbol];
       if (iteratorMethod) {
         return iteratorMethod.call(iterable);
       }
+=======
+/***/ 5:
+<<<<<<< HEAD
+/*!*******************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/pages.json ***!
+  \*******************************************/
+=======
+<<<<<<< HEAD
+/*!****************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp/app/pages.json ***!
+  \****************************************************/
+>>>>>>> e1932ee875f9a8e320d01cea65ca185ae4af5c91
+=======
+/*!************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/pages.json ***!
+  \************************************************************/
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+/*! no static exports found */
+/***/ (function(module, exports) {
+>>>>>>> master
 
       if (typeof iterable.next === "function") {
         return iterable;
@@ -11372,21 +11858,107 @@ if (hadRuntime) {
           next.value = undefined;
           next.done = true;
 
+<<<<<<< HEAD
           return next;
         };
 
         return next.next = next;
       }
     }
+=======
+<<<<<<< HEAD
+/***/ 67:
+/*!*********************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/login.js ***!
+  \*********************************************/
+=======
+/***/ 90:
+/*!********************************************************************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \********************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+<<<<<<< HEAD
+Object.defineProperty(exports, "__esModule", { value: true });exports.getLogin = getLogin;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 登录
+function getLogin(data) {
+  return _request.default.post('/user/login', data);
+}
+
+/***/ }),
+
+/***/ 76:
+/*!************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/api/register.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getRegister = getRegister;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 获取6位随机数
+// export function getMessage(data) {
+// 	return request.post('/user/getMessage', data)
+// }
+
+// 注册
+function getRegister(data) {
+  return _request.default.post('/user/register', data);
+}
+
+/***/ }),
+
+/***/ 91:
+/*!***************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 92));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 93));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 94));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+=======
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 91));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 92));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 93));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+{
+  en: _en.default,
+  'zh-Hans': _zhHans.default,
+  'zh-Hant': _zhHant.default };exports.default = _default;
+>>>>>>> master
 
     // Return an iterator with no values.
     return { next: doneResult };
   }
   runtime.values = values;
 
+<<<<<<< HEAD
   function doneResult() {
     return { value: undefined, done: true };
   }
+=======
+<<<<<<< HEAD
+/***/ 92:
+/*!**************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \**************************************************************************************************/
+=======
+/***/ 91:
+/*!*******************************************************************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \*******************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+/*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
+/***/ (function(module) {
+>>>>>>> master
 
   Context.prototype = {
     constructor: Context,
@@ -11400,8 +11972,24 @@ if (hadRuntime) {
       this.done = false;
       this.delegate = null;
 
+<<<<<<< HEAD
       this.method = "next";
       this.arg = undefined;
+=======
+<<<<<<< HEAD
+/***/ 93:
+/*!*******************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
+  \*******************************************************************************************************/
+=======
+/***/ 92:
+/*!************************************************************************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
+  \************************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+/*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
+/***/ (function(module) {
+>>>>>>> master
 
       this.tryEntries.forEach(resetTryEntry);
 
@@ -11417,8 +12005,24 @@ if (hadRuntime) {
       }
     },
 
+<<<<<<< HEAD
     stop: function() {
       this.done = true;
+=======
+<<<<<<< HEAD
+/***/ 94:
+/*!*******************************************************************************************************!*\
+  !*** D:/搜狗高速下载/skr移动端/shop-mo/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
+  \*******************************************************************************************************/
+=======
+/***/ 93:
+/*!************************************************************************************************************************!*\
+  !*** E:/z/web/项目/8vue项目/7.11uniapp-shop-mo/app/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
+  \************************************************************************************************************************/
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
+/*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
+/***/ (function(module) {
+>>>>>>> master
 
       var rootEntry = this.tryEntries[0];
       var rootRecord = rootEntry.completion;
@@ -11426,8 +12030,15 @@ if (hadRuntime) {
         throw rootRecord.arg;
       }
 
+<<<<<<< HEAD
       return this.rval;
     },
+=======
+<<<<<<< HEAD
+=======
+/***/ })
+>>>>>>> f86fbbc1382ee7d0f6eca609b3ac80c86632b7bd
+>>>>>>> master
 
     dispatchException: function(exception) {
       if (this.done) {
@@ -11619,6 +12230,7 @@ function getImg(data) {
   return _request.default.post('/type/getImg', data);
 }
 
+>>>>>>> 5e4b85945f15a0b8f5e93886973307d3b6fd0ffe
 /***/ })
 
 }]);
